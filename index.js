@@ -14,13 +14,17 @@ function createMenuItem(name, cost, category) {
   /* Code here */
   let item = {
     name: name,
-    cost: cost,
+    price: cost,
     category: category,
   };
   return item;
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+const icecream = createMenuItem("Icecream", 6, "Dessert");
+const spaghetti = createMenuItem("Spaghetti", 16, "Dinner");
+const pizza = createMenuItem("Pizza", 15, "Dinner");
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
