@@ -111,17 +111,6 @@ function findIndex(listName, objectName, content) {
 reviews[findIndex(reviews, "name", "Reyna")].feedback =
   "this place is chill with really cool people, great for getting work done on weekdays";
 
-/*
-function findIndex(listName,objectName,content) {
-  for(let i = 0; i < listName.length; i++){
-    if(listName[i].objectName === content){
-      return i
-    }
-    index = i
-  }
-}
-*/
-
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
  Your function should take two arguments:
@@ -136,6 +125,8 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
   /* code here */
+  let review = reviews[index];
+  return `${review.name} gave the restaurant a ${review.rating} star review and their feedback was: ${review.feedback}`;
 }
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
