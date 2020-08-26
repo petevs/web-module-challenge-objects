@@ -90,9 +90,37 @@ const reviews = [
 
 /* Task 3: Console.log just Julius' feedback */
 
+console.log(reviews[5].feedback);
+
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+reviews.push({ name: "Pete", rating: 5, feedback: "Great place." });
+
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+function findIndex(listName, objectName, content) {
+  let index = 0;
+  for (let i = 0; i < listName.length; i++) {
+    if (listName[i][objectName] === content) {
+      index = i;
+    }
+  }
+  return index;
+}
+
+reviews[findIndex(reviews, "name", "Reyna")].feedback =
+  "this place is chill with really cool people, great for getting work done on weekdays";
+
+/*
+function findIndex(listName,objectName,content) {
+  for(let i = 0; i < listName.length; i++){
+    if(listName[i].objectName === content){
+      return i
+    }
+    index = i
+  }
+}
+*/
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
