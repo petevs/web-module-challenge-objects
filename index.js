@@ -212,6 +212,12 @@ The returned object should have the following characteristics:
          (2) returns the updated value of the `odometer`.
 */
 
-function carMaker(/* code here */) {
+function carMaker(odometer) {
   /* code here */
+  let car = {};
+  car.odometer = odometer;
+  car.drive = function (distance) {
+    return this.odometer + distance;
+  };
+  return car;
 }
